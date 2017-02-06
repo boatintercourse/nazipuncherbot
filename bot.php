@@ -14,7 +14,7 @@ $content = $connection->get("statuses/user_timeline", ["screen_name" => "Richard
 $last_tweet_id = file_get_contents("last_tweet");
 
 if($content[0]->id_str != $last_tweet_id) {
-  $reply = $connection->post("statuses/update", ["status" => "@TestAccount9122",
+  $reply = $connection->post("statuses/update", ["status" => "@RichardBSpencer",
                                                 "in_reply_to_status_id" => $content[0]->id_str,
                                                 "media_ids" => "828541844824825857"]);
 
